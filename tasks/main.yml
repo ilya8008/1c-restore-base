@@ -1,0 +1,3 @@
+---
+# tasks file for 1c-restore-base
+- include: restore_dumps.yml

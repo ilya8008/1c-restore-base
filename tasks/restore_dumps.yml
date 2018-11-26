@@ -1,0 +1,10 @@
+---
+- name: Copy dumps
+  copy:
+    src: "{{ item }}"
+    dest: /tmp
+  with_fileglob:
+    - dumps/*
+
+- name: Restore db
+  script: scripts/restore_db.sh
