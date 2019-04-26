@@ -6,7 +6,7 @@ if [ -z "$ras" ];
        	/opt/1C/v8.3/x86_64/ras cluster --daemon
 fi
 
-cluster=`/opt/1C/v8.3/x86_64/rac cluster list | grep cluster | awk '{print $3}'`
+cluster=`/opt/1C/v8.3/x86_64/rac cluster list | grep ^cluster | awk '{print $3}'`
 echo $cluster
 
 for var in $(ls /tmp/*.sql.gz)
